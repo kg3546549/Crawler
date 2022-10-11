@@ -38,7 +38,7 @@ axios.get('https://comic.naver.com/webtoon/weekday')
         
         //JSON Writing
         const JSON_weekToonList = JSON.stringify(toonList);
-        fs.writeFileSync('first-json.json',JSON_weekToonList);
+        fs.writeFileSync('Toon Ranking.json',JSON_weekToonList);
         
     })
     .catch(function(error) {

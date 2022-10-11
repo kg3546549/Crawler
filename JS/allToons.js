@@ -2,7 +2,7 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 const fs = require('fs');
 
-const baseURL = 'https://comic.naver.com';
+const baseURL = 'https://comic.naver.com/webtoon/creation';
 const AlphabetList = ['ㄱ','ㄴ','ㄷ','ㄹ','ㅁ','ㅂ','ㅅ','ㅇ','ㅈ','ㅊ','ㅋ','ㅌ','ㅍ','ㅎ','A','0'];
 
 let allToonList = {
@@ -11,7 +11,7 @@ let allToonList = {
     toonList : [],
 };
 
-axios.get('https://comic.naver.com/webtoon/creation')
+axios.get(baseURL)
     .then(function(response) {
         const $ = cheerio.load(response.data);
         
